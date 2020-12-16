@@ -29,13 +29,24 @@ class Mobile(Computer):
         return self.company + ' is calling someone'
     
 class Tablet(Mobile):
-    def __init__(self, color, size, weight, performance, model, company, tel)
-    self.tel = tel
+    def __init__(self, color, size, weight, performance, model, company, tel):
+        self.tel = tel
 
 class Phone(Mobile):
-    def __init__(self, color, size, weight, performance, model, company, tel, sms):
+    def __init__(self, color, size, weight, performance, model, company, tel):
         self.tel = tel
-        self.sms = sms
 
-    def sms(self):
-        return self.company + ' is smsing somebody'
+    def sendsms(self, message):
+        print(str(self.tel) + ' sending a message: ' + message)
+
+    def makeacall(self, num):
+        print(str(self.tel) + ' is calling: ' + str(num))
+
+
+mobile = Phone("black", 20, 10, "good", "S20", "samsung", 822252885)
+
+# print(mobile)
+
+mobile.sendsms('hello')
+mobile.makeacall(718181630)
+
